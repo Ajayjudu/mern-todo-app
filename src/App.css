@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  transition: background 0.5s ease;
+}
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+::-webkit-scrollbar-thumb {
+  background: #64b5f6;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #42a5f5;
+}
+
+/* Header Styling */
+.header {
+  background-color: #1976d2;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+.header:hover {
+  background-color: #1565c0;
+}
+
+/* Container for Tasks */
+.task-container {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  background-color: whitesmoke;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* Add Task Section */
+.addTask {
+  height: 10vh;
+  background-color: transparent;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Outlet Section */
+.outlet {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+  overflow: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+.outlet:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Indicator Styling */
+.indicator {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+.indicator:hover {
+  transform: scale(1.05);
+}
+
+/* Active and Logout Buttons */
+.active, .logout {
+  color: white;
+  background-color: rgb(58, 58, 197);
+  font-weight: bolder;
+  padding: 5px 10px;
+  border-radius: 50px;
+  box-shadow: 1px 1px 5px 1px rgba(0,0,0,0.5);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+.active:hover, .logout:hover {
+  background-color: rgb(48, 48, 180);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .task-container {
+    padding: 10px;
+  }
+  .header {
+    font-size: 1.5rem;
+  }
+}
